@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // ***********************************************************
 // Static assets exist under client
 // ***********************************************************
-app.use(express.static("client/public"));
+app.use(express.static("client/src"));
 
 // ***********************************************************
 // Adding Routes,  need to work on this
@@ -35,7 +35,7 @@ app.use(routes);
     if (err) {
       console.log('Unable to connect to the mongoDB server. :', err);
     } else {
-      console.log('Connection established to', mongoURL);
+       
     }
    });
 
