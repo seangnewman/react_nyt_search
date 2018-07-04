@@ -14,6 +14,10 @@ process.on('unhandledRejection', err => {
 // Ensure environment variables are read.
 require('../config/env');
 
+const mongoose = require('mongoose');
+const db = require('../models');
+mongoose.Promise = global.Promise;
+
 const fs = require('fs');
 const chalk = require('chalk');
 const webpack = require('webpack');
@@ -42,6 +46,15 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
+
+const mongoURL = "mongodb://heroku_rdsn9lrh:8jupf52ejk0o85dvho6s5i6ggo@ds229458.mlab.com:29458/heroku_rdsn9lrh"
+  mongoose.connect(mongoURL, function (err, db) {
+    if (err) {
+      console.log('Unable to connect to the mongoDB server. Error:', err);
+    } else {
+      console.log('Connection established to', mongoURL);
+    }
+   });
 
 if (process.env.HOST) {
   console.log(

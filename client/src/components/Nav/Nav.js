@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import './Nav.css';
 
 const Nav = () =>
   <nav className="navbar navbar-inverse bg-inverse navbar-top">
     <div className="container-fluid">
       <div className="navbar-header">
-        <button type="button" className="collapsed navbar-toggle">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar" /> <span className="icon-bar" />
-          <span className="icon-bar" />
-        </button>
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand" id="nytHeader">
           New York Times Article Scraper
         </Link>
       </div>

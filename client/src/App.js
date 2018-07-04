@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Search from "./pages/Search/Search";
 import SavedArticles from './pages/SavedArticles/SavedArticles';
 import NoMatch from "./pages/NoMatch/NoMatch";
+import './App.css';
 
 const App = () =>
   <Router>

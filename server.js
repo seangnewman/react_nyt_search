@@ -25,13 +25,20 @@ app.use(routes);
 // *********************************************************** 
   mongoose.Promise = global.Promise;
   // Connect to mongo
-  const PORT = process.env.PORT || 3001;
-  mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/nytreactsaved",
-  {
-    useMongoClient: true
-  }
-);
+  const PORT =   3000;
+
+  //mongoose.connect("mongodb://localhost/theOnionPopulator");
+  //mongodb://heroku_dd0hl05s:<dbpassword>@ds227821.mlab.com:27821/heroku_dd0hl05s
+  //mongoose.connect("mongodb://localhost/nytMongoDB");
+  const mongoURL = "mongodb://heroku_rdsn9lrh:8jupf52ejk0o85dvho6s5i6ggo@ds229458.mlab.com:29458/heroku_rdsn9lrh"
+  mongoose.connect(mongoURL, function (err, db) {
+    if (err) {
+      console.log('Unable to connect to the mongoDB server. Error:', err);
+    } else {
+      console.log('Connection established to', url);
+    }
+   });
+
 
 // ***********************************************************
 // Start the API server
