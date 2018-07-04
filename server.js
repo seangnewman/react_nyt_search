@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // ***********************************************************
 // Static assets exist under client
 // ***********************************************************
-app.use(express.static("client/build"));
+app.use(express.static("client/public"));
 
 // ***********************************************************
 // Adding Routes,  need to work on this
