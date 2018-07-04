@@ -1,5 +1,6 @@
 {
   "name": "react_nyt_search",
+  "homepage": "http://seangnewman.github.io/react_nyt_search",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -58,7 +59,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "heroku-postbuild": "npm start"
+    "heroku-postbuild": "npm start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "serviceworker-webpack-plugin": "^1.0.0-alpha02"
