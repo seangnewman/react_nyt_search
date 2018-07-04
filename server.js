@@ -25,7 +25,7 @@ app.use(routes);
 // *********************************************************** 
   mongoose.Promise = global.Promise;
   // Connect to mongo
-  const PORT =   3000;
+  var PORT = process.env.PORT || 3000;
 
   //mongoose.connect("mongodb://localhost/theOnionPopulator");
   //mongodb://heroku_dd0hl05s:<dbpassword>@ds227821.mlab.com:27821/heroku_dd0hl05s
