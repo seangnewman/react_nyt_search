@@ -57,8 +57,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "test": "node scripts/test.js --env=jsdom"
+    
   },
   "devDependencies": {
     "serviceworker-webpack-plugin": "^1.0.0-alpha02"
