@@ -33,7 +33,7 @@ app.use(routes);
   const mongoURL = "mongodb://heroku_rdsn9lrh:8jupf52ejk0o85dvho6s5i6ggo@ds229458.mlab.com:29458/heroku_rdsn9lrh"
   mongoose.connect(mongoURL, function (err, db) {
     if (err) {
-      console.log('Unable to connect to the mongoDB server. Error:', err);
+      console.log('Unable to connect to the mongoDB server.', err);
     } else {
       console.log('Connection established to', mongoURL);
     }
